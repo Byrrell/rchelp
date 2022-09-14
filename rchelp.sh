@@ -3,20 +3,21 @@
 help () {
 echo """RCHELP - Rclone helper
 Help has arrived!
-[-d directory] - optional path to (un)mount (defaults to /mnt/rclone)
+[-d directory] - optional path to (un)mount (defaults to /mnt/rchelp)
 [-m remote] ---- mount specified rclone remote
 [-u] ----------- unmount remote
+[-l] ----------- list rclone remotes
 [-h] ----------- help"""
 }
 
 if [ $# -eq 0 ];
 then
-    help
+    help;
     exit 0
 fi
 
-drive="/mnt/rclone";
-while getopts "d:m:uh" option; do
+drive="/mnt/rchelp";
+while getopts "d:m:ulh" option; do
 	case $option in
 		d)
 		  drive=$OPTARG
@@ -28,6 +29,9 @@ while getopts "d:m:uh" option; do
 		u)
 		  fusermount -u $drive
 		  echo "unmounted $drive"
+		  ;;
+		l)
+		  rclone listremotes
 		  ;;
 		h)
 		  help
