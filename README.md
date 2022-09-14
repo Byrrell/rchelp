@@ -3,7 +3,7 @@ Rclone helper for bash
 What is it? A quicker and more memorable script to (un)mount rclone remotes.
 
 ## Installation
-Download the script and place it in /usr/local/bin and rename to "rchelp".
+Clone repo and run setup.sh
 
 ## Requirements
  - Rclone (obviously)
