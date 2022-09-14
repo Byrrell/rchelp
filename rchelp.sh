@@ -22,7 +22,6 @@ while getopts "d:m:uh" option; do
 		  drive=$OPTARG
 		  ;;
 		m)
-		  echo $drive
 		  rclone mount $OPTARG: $drive --daemon
 		  echo "$drive mounted to $drive"
 		  ;;
