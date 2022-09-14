@@ -3,7 +3,10 @@ Rclone helper for bash
 What is it? A quicker and more memorable script to (un)mount rclone remotes.
 
 ## Installation
-Clone repo and run setup.sh
+Clone repo and run
+```
+sudo setup.sh
+```
 
 ## Requirements
  - Rclone (obviously)
